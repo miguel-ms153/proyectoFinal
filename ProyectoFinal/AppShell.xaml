@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ProyectoFinal.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ProyectoFinal"
+    xmlns:views="clr-namespace:ProyectoFinal.Views"
+    Title="EcoScan Hogar">
+    <TabBar>
+        <ShellContent Title="Inicio" ContentTemplate="{DataTemplate local:MainPage}" Route="home" />
+        <ShellContent Title="Agregar" ContentTemplate="{DataTemplate views:ProductFormPage}" Route="add" />
+        <ShellContent Title="Inventario" ContentTemplate="{DataTemplate views:InventoryPage}" Route="inventory" />
+        <ShellContent Title="Alertas" ContentTemplate="{DataTemplate views:AlertsPage}" Route="alerts" />
+        <ShellContent Title="Estadísticas" ContentTemplate="{DataTemplate views:StatisticsPage}" Route="statistics" />
+    </TabBar>
+
+</Shell>
