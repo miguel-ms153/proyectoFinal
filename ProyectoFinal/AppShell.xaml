@@ -6,6 +6,10 @@
     xmlns:local="clr-namespace:ProyectoFinal"
     xmlns:views="clr-namespace:ProyectoFinal.Views"
     Title="EcoScan Hogar">
+    <Shell.ToolbarItems>
+        <ToolbarItem Text="Cerrar sesión" Order="Primary" Priority="0" Clicked="LogoutClicked" />
+    </Shell.ToolbarItems>
+
     <TabBar>
         <ShellContent Title="Inicio" ContentTemplate="{DataTemplate local:MainPage}" Route="home" />
         <ShellContent Title="Agregar" ContentTemplate="{DataTemplate views:ProductFormPage}" Route="add" />
@@ -13,5 +17,4 @@
         <ShellContent Title="Alertas" ContentTemplate="{DataTemplate views:AlertsPage}" Route="alerts" />
         <ShellContent Title="Estadísticas" ContentTemplate="{DataTemplate views:StatisticsPage}" Route="statistics" />
     </TabBar>
-
 </Shell>
