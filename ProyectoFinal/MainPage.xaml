@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ProyectoFinal.MainPage" Title="Inicio">
- <ScrollView><VerticalStackLayout Padding="24" Spacing="16">
-  <Label Text="EcoScan Hogar" FontSize="30" FontAttributes="Bold" TextColor="#1C6B4C" />
-  <Label Text="Tus alimentos, a tiempo." FontSize="17" />
-  <Grid ColumnDefinitions="*,*" ColumnSpacing="12"><Frame BackgroundColor="#E1F1E8" CornerRadius="8"><VerticalStackLayout><Label Text="Productos"/><Label x:Name="Products" FontSize="30" FontAttributes="Bold"/></VerticalStackLayout></Frame><Frame Grid.Column="1" BackgroundColor="#FFF1D6" CornerRadius="8"><VerticalStackLayout><Label Text="Por vencer"/><Label x:Name="Expiring" FontSize="30" FontAttributes="Bold"/></VerticalStackLayout></Frame></Grid>
-  <Button Text="Agregar producto" Clicked="AddClicked" BackgroundColor="#1C6B4C" TextColor="White"/>
-  <Button Text="Revisar alertas" Clicked="AlertsClicked"/>
- </VerticalStackLayout></ScrollView>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ProyectoFinal.MainPage" Title="Inicio" BackgroundColor="#F8FBF8">
+  <ScrollView>
+    <VerticalStackLayout Padding="20,18,20,28" Spacing="16">
+      <Grid ColumnDefinitions="*,Auto">
+        <VerticalStackLayout Spacing="2"><Label Text="EcoScan Hogar" FontSize="28" FontAttributes="Bold" TextColor="#145C43"/><Label Text="Aprovecha mejor lo que ya tienes." FontSize="14" TextColor="#5A7065"/></VerticalStackLayout>
+        <Border Grid.Column="1" BackgroundColor="#E0F1E7" StrokeThickness="0" StrokeShape="RoundRectangle 18" Padding="12,7"><Label Text="Tu cocina" TextColor="#145C43" FontAttributes="Bold"/></Border>
+      </Grid>
+      <Border StrokeThickness="0" StrokeShape="RoundRectangle 16" BackgroundColor="#EAF7EF"><Image Source="ecoscan_hero.png" Aspect="AspectFill" HeightRequest="170"/></Border>
+      <Label Text="Resumen de hoy" FontSize="19" FontAttributes="Bold" TextColor="#193D2E"/>
+      <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+        <Border BackgroundColor="#DCF2E5" StrokeThickness="0" StrokeShape="RoundRectangle 14" Padding="16"><VerticalStackLayout Spacing="4"><Label Text="EN INVENTARIO" FontSize="11" TextColor="#48705C"/><Label x:Name="Products" FontSize="32" FontAttributes="Bold" TextColor="#145C43"/><Label Text="productos activos" TextColor="#48705C" FontSize="12"/></VerticalStackLayout></Border>
+        <Border Grid.Column="1" BackgroundColor="#FFF0D2" StrokeThickness="0" StrokeShape="RoundRectangle 14" Padding="16"><VerticalStackLayout Spacing="4"><Label Text="PRÓXIMOS A VENCER" FontSize="11" TextColor="#8A5B12"/><Label x:Name="Expiring" FontSize="32" FontAttributes="Bold" TextColor="#9B6200"/><Label Text="requieren atención" TextColor="#8A5B12" FontSize="12"/></VerticalStackLayout></Border>
+      </Grid>
+      <Label Text="¿Qué deseas hacer?" FontSize="19" FontAttributes="Bold" TextColor="#193D2E" Margin="0,4,0,0"/>
+      <Button Text="＋  Agregar un producto" Clicked="AddClicked" BackgroundColor="#19704F" TextColor="White" CornerRadius="12" HeightRequest="54" FontAttributes="Bold"/>
+      <Button Text="Ver productos por vencer" Clicked="AlertsClicked" BackgroundColor="#FFFFFF" TextColor="#19704F" BorderColor="#B8DCC7" BorderWidth="1" CornerRadius="12" HeightRequest="52"/>
+    </VerticalStackLayout>
+  </ScrollView>
 </ContentPage>

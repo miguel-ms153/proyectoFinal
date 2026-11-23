@@ -2,6 +2,8 @@
 
 using ProyectoFinal.Services;
 
+using Plugin.LocalNotification;
+
 namespace ProyectoFinal
 {
     public static class MauiProgram
@@ -11,6 +13,7 @@ namespace ProyectoFinal
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseLocalNotification()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

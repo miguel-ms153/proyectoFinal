@@ -1,0 +1,14 @@
+# Archivos temporales de Visual Studio y .NET
+.vs/
+**/bin/
+**/obj/
+
+# Base de datos local de desarrollo SQLite
+*.db
+*.db-shm
+*.db-wal
+
+# Archivos por usuario o sistema
+*.user
+*.suo
+.DS_Store

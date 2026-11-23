@@ -1,0 +1,13 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ProyectoFinal.Views.LoginPage" BackgroundColor="#F4FBF6">
+ <ScrollView><VerticalStackLayout Padding="28,70,28,28" Spacing="16">
+  <Border BackgroundColor="#DDF2E4" StrokeThickness="0" StrokeShape="RoundRectangle 28" Padding="22"><VerticalStackLayout><Label Text="EcoScan Hogar" FontSize="30" FontAttributes="Bold" TextColor="#145C43"/><Label Text="Cuida tus alimentos y reduce desperdicios." TextColor="#4A6A58"/></VerticalStackLayout></Border>
+  <Label Text="Bienvenido" FontSize="25" FontAttributes="Bold" TextColor="#193D2E" Margin="0,14,0,0"/>
+  <Label Text="Ingresa con tu cuenta o crea una nueva para comenzar." TextColor="#5A7065"/>
+  <Entry x:Name="NameEntry" Placeholder="Nombre (solo para crear cuenta)"/>
+  <Entry x:Name="EmailEntry" Placeholder="Correo electrónico" Keyboard="Email"/>
+  <Entry x:Name="PasswordEntry" Placeholder="Contraseña" IsPassword="True"/>
+  <Label x:Name="MessageLabel" TextColor="#A63D40"/>
+  <Button Text="Iniciar sesión" Clicked="LoginClicked" BackgroundColor="#19704F" TextColor="White" CornerRadius="12" HeightRequest="52"/>
+  <Button Text="Crear cuenta" Clicked="RegisterClicked" BackgroundColor="White" TextColor="#19704F" BorderColor="#B8DCC7" BorderWidth="1" CornerRadius="12" HeightRequest="52"/>
+ </VerticalStackLayout></ScrollView>
+</ContentPage>

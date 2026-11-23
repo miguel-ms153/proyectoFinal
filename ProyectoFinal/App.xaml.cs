@@ -11,7 +11,8 @@ namespace ProyectoFinal
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new AppShell());
+            Page startPage = Preferences.Default.ContainsKey("ecoscan_user") ? new AppShell() : new Views.LoginPage();
+            return new Window(startPage);
         }
     }
 }

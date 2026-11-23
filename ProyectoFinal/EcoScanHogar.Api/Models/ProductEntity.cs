@@ -8,4 +8,5 @@ public sealed class ProductEntity
     public int Quantity { get; set; } = 1;
     public DateTime ExpirationDate { get; set; }
     public bool IsConsumed { get; set; }
+    public bool IsWasted { get; set; }
 }

@@ -1,1 +1,12 @@
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ProyectoFinal.Views.InventoryPage" Title="Inventario"><VerticalStackLayout Padding="20" Spacing="12"><Label Text="Productos disponibles" FontSize="26" FontAttributes="Bold"/><CollectionView x:Name="ProductList"><CollectionView.ItemTemplate><DataTemplate><Frame CornerRadius="8" Margin="0,4"><Grid ColumnDefinitions="*,Auto"><VerticalStackLayout><Label Text="{Binding Name}" FontAttributes="Bold"/><Label Text="{Binding Category}"/><Label Text="{Binding Status}" TextColor="#1C6B4C"/></VerticalStackLayout><Button Grid.Column="1" Text="Consumir" CommandParameter="{Binding Id}" Clicked="ConsumeClicked"/></Grid></Frame></DataTemplate></CollectionView.ItemTemplate></CollectionView></VerticalStackLayout></ContentPage>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ProyectoFinal.Views.InventoryPage" Title="Inventario">
+  <VerticalStackLayout Padding="20" Spacing="12">
+    <Label Text="Inventario" FontSize="26" FontAttributes="Bold"/>
+    <Label Text="Marca cada producto como consumido a tiempo o desperdiciado." TextColor="#52645B"/>
+    <CollectionView x:Name="ProductList"><CollectionView.ItemTemplate><DataTemplate>
+      <Frame CornerRadius="8" Margin="0,4"><VerticalStackLayout Spacing="6">
+        <Label Text="{Binding Name}" FontAttributes="Bold"/><Label Text="{Binding Category}"/><Label Text="{Binding Status}" TextColor="#1C6B4C"/>
+        <HorizontalStackLayout Spacing="8"><Button Text="Consumir" CommandParameter="{Binding Id}" Clicked="ConsumeClicked"/><Button Text="Desperdiciar" CommandParameter="{Binding Id}" Clicked="WasteClicked" BackgroundColor="#A63D40" TextColor="White"/></HorizontalStackLayout>
+      </VerticalStackLayout></Frame>
+    </DataTemplate></CollectionView.ItemTemplate></CollectionView>
+  </VerticalStackLayout>
+</ContentPage>
