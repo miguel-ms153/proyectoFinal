@@ -12,12 +12,11 @@ public partial class MainPage : ContentPage
     protected override async void OnAppearing()
     {
         base.OnAppearing();
-
         var products = await store.GetAsync();
         Products.Text = products.Count.ToString();
         Expiring.Text = products.Count(p => p.DaysUntilExpiration is >= 0 and <= 3 && !p.IsConsumed && !p.IsWasted).ToString();
+        SyncStatusLabel.Text = store.SyncStatus;
 
-        // La alerta se ejecuta una sola vez y fuera de la carga visual.
         if (!hasLoaded)
         {
             hasLoaded = true;

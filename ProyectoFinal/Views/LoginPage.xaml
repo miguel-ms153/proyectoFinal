@@ -9,5 +9,6 @@
   <Label x:Name="MessageLabel" TextColor="#A63D40"/>
   <Button Text="Iniciar sesión" Clicked="LoginClicked" BackgroundColor="#19704F" TextColor="White" CornerRadius="12" HeightRequest="52"/>
   <Button Text="Crear cuenta" Clicked="RegisterClicked" BackgroundColor="White" TextColor="#19704F" BorderColor="#B8DCC7" BorderWidth="1" CornerRadius="12" HeightRequest="52"/>
+  <Button Text="¿Olvidaste tu contraseña?" Clicked="RecoveryClicked" BackgroundColor="Transparent" TextColor="#5A2DDF" HeightRequest="44"/>
  </VerticalStackLayout></ScrollView>
 </ContentPage>

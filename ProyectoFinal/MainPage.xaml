@@ -7,6 +7,9 @@
         <Border Grid.Column="1" BackgroundColor="#E0F1E7" StrokeThickness="0" StrokeShape="RoundRectangle 18" Padding="12,7"><Label Text="Tu cocina" TextColor="#145C43" FontAttributes="Bold"/></Border>
       </Grid>
       <Border StrokeThickness="0" StrokeShape="RoundRectangle 16" BackgroundColor="#EAF7EF"><Image Source="ecoscan_hero.png" Aspect="AspectFill" HeightRequest="170"/></Border>
+      <Border BackgroundColor="#EDF5FF" Stroke="#D7E8FA" StrokeShape="RoundRectangle 12" Padding="12,8">
+        <Label x:Name="SyncStatusLabel" Text="Comprobando conexión…" TextColor="#2C5A7A" FontSize="13"/>
+      </Border>
       <Label Text="Resumen de hoy" FontSize="19" FontAttributes="Bold" TextColor="#193D2E"/>
       <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
         <Border BackgroundColor="#DCF2E5" StrokeThickness="0" StrokeShape="RoundRectangle 14" Padding="16"><VerticalStackLayout Spacing="4"><Label Text="EN INVENTARIO" FontSize="11" TextColor="#48705C"/><Label x:Name="Products" FontSize="32" FontAttributes="Bold" TextColor="#145C43"/><Label Text="productos activos" TextColor="#48705C" FontSize="12"/></VerticalStackLayout></Border>

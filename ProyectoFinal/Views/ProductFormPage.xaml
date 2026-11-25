@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="ProyectoFinal.Views.ProductFormPage" Title="Agregar producto">
- <ScrollView>
-     <VerticalStackLayout Padding="24" Spacing="14">
-         <Label Text="Nuevo producto" FontSize="28" FontAttributes="Bold"/>
-         <Entry x:Name="NameEntry" Placeholder="Nombre del producto"/>
-         <Picker x:Name="CategoryPicker" Title="Categoría"><Picker.Items>
-             <x:String>Alimentos</x:String>
-             <x:String>Lácteos</x:String>
-             <x:String>Bebidas</x:String>
-             <x:String>Limpieza</x:String>
-         </Picker.Items>
-         </Picker><Stepper x:Name="QuantityStepper" Minimum="1" Maximum="20" Value="1"/>
-         <Label x:Name="QuantityLabel" Text="Cantidad: 1"/>
-         <DatePicker x:Name="ExpirationPicker" MinimumDate="{x:Static x:DateTime.Today}"/>
-         <Button Text="Tomar foto del producto" Clicked="CameraClicked"/>
-         <Label x:Name="CameraStatus"/>
-         <Button Text="Guardar producto" BackgroundColor="#1C6B4C" TextColor="White" Clicked="SaveClicked"/>
-     </VerticalStackLayout></ScrollView>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoFinal.Views.ProductFormPage"
+             Title="Agregar producto">
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="14">
+            <Label Text="Nuevo producto" FontSize="28" FontAttributes="Bold"/>
+            <Entry x:Name="NameEntry" Placeholder="Nombre del producto"/>
+            <Picker x:Name="CategoryPicker" Title="Categoría">
+                <Picker.Items>
+                    <x:String>Alimentos</x:String>
+                    <x:String>Lácteos</x:String>
+                    <x:String>Bebidas</x:String>
+                    <x:String>Limpieza</x:String>
+                </Picker.Items>
+            </Picker>
+            <Stepper x:Name="QuantityStepper" Minimum="1" Maximum="20" Value="1"/>
+            <Label x:Name="QuantityLabel" Text="Cantidad: 1"/>
+            <DatePicker x:Name="ExpirationPicker"/>
+            <Button Text="Tomar foto del producto" Clicked="CameraClicked"/>
+            <Label x:Name="CameraStatus"/>
+            <Button Text="Guardar producto" BackgroundColor="#1C6B4C" TextColor="White" Clicked="SaveClicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
